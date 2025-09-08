@@ -1,0 +1,42 @@
+Folder PATH listing
+Volume serial number is 8A4D-5FA0
+E:.
+|   eslint.config.mjs
+|   folder-structure.txt
+|   jsconfig.json
+|   next.config.mjs
+|   package-lock.json
+|   package.json
+|   postcss.config.mjs
+|   
++---components
+|   +---Footer
+|   +---Hero
+|   \---Navbar
++---public
+|       file.svg
+|       globe.svg
+|       next.svg
+|       vercel.svg
+|       window.svg
+|       
+\---src
+    \---app
+        |   favicon.ico
+        |   globals.css
+        |   layout.js
+        |   page.js
+        |   
+        \---pages
+            +---about
+            |       page.js
+            |       
+            +---contact
+            |       page.js
+            |       
+            +---predictor
+            |       page.js
+            |       
+            \---wqi
+                    page.js
+                    
