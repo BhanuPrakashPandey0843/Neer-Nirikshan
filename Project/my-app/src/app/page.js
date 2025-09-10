@@ -6,6 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
+import AboutSection from '../../components/AboutSection/AboutSection';
 
 const Page = () => {
   const scrollContainer = useRef(null);
@@ -56,6 +57,7 @@ const Page = () => {
     >
       <Navbar />
       <Hero />
+      <AboutSection />
       
      
 
@@ -74,3 +76,5 @@ const Page = () => {
 };
 
 export default Page;
+
+
