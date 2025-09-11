@@ -8,6 +8,21 @@ import logo from './Neer_Nirikshan_Logo.png';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const socialLinks = [
+    { href: '#', icon: 'ri-facebook-fill', label: 'Facebook' },
+    { href: '#', icon: 'ri-twitter-fill', label: 'Twitter' },
+    { href: '#', icon: 'ri-instagram-fill', label: 'Instagram' },
+    { href: '#', icon: 'ri-linkedin-box-fill', label: 'LinkedIn' },
+  ];
+
+  const navLinks = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About WQI' },
+    { href: '/predictor', label: 'Predictor' },
+    { href: '/wqi', label: 'WQI Details' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
   return (
     <footer className="relative bg-gradient-to-t from-blue-900 via-blue-800 to-blue-600 text-white w-full shadow-inner">
       {/* Main Footer Content */}
@@ -25,26 +40,23 @@ export default function Footer() {
             alt="Neer Nirikshan Logo"
             width={100}
             height={100}
-            className="rounded-full shadow-2xl mb-5 border-2 border-white/40 transition-transform transform hover:scale-105"
+            className="rounded-full shadow-2xl mb-5 border-2 border-white/40 transition-transform hover:scale-105"
           />
           <p className="text-base opacity-90 leading-relaxed max-w-xs">
             Empowering water quality monitoring and prediction with machine
             learning and environmental insights.
           </p>
           <div className="flex gap-5 mt-6">
-            {[
-              { href: '#', icon: 'ri-facebook-fill', label: 'Facebook' },
-              { href: '#', icon: 'ri-twitter-fill', label: 'Twitter' },
-              { href: '#', icon: 'ri-instagram-fill', label: 'Instagram' },
-              { href: '#', icon: 'ri-linkedin-box-fill', label: 'LinkedIn' },
-            ].map((item, idx) => (
+            {socialLinks.map((item, idx) => (
               <a
                 key={idx}
                 href={item.href}
                 aria-label={item.label}
-                className="text-2xl hover:text-blue-300 transition-transform transform hover:scale-125"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-2xl hover:text-blue-300 transition-transform hover:scale-125"
               >
-                <i className={item.icon}></i>
+                <i className={item.icon} aria-hidden="true"></i>
               </a>
             ))}
           </div>
@@ -56,21 +68,19 @@ export default function Footer() {
             Quick Links
           </h4>
           <ul className="space-y-3 text-sm">
-            {[
-              { href: '/', label: 'Home' },
-              { href: '/about', label: 'About WQI' },
-              { href: '/predictor', label: 'Predictor' },
-              { href: '/wqi', label: 'WQI Details' },
-              { href: '/contact', label: 'Contact' },
-            ].map((item, idx) => (
-              <li key={idx}>
+            {navLinks.map((item, idx) => (
+              <motion.li
+                key={idx}
+                whileHover={{ x: 5, scale: 1.05 }}
+                transition={{ type: 'spring', stiffness: 300 }}
+              >
                 <Link
                   href={item.href}
                   className="hover:underline hover:text-blue-200 transition-colors duration-300"
                 >
                   {item.label}
                 </Link>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -82,13 +92,13 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2 justify-center md:justify-start">
-              <i className="ri-map-pin-line text-lg"></i> BIT Mesra
+              <i className="ri-map-pin-line text-lg" aria-hidden="true"></i> BIT Mesra
             </li>
             <li className="flex items-center gap-2 justify-center md:justify-start">
-              <i className="ri-phone-line text-lg"></i> +964 (0) 770 342 7474
+              <i className="ri-phone-line text-lg" aria-hidden="true"></i> +964 (0) 770 342 7474
             </li>
             <li className="flex items-center gap-2 justify-center md:justify-start">
-              <i className="ri-mail-line text-lg"></i>{' '}
+              <i className="ri-mail-line text-lg" aria-hidden="true"></i>
               <a
                 href="mailto:contact@neernirikshancompany.com"
                 className="hover:underline hover:text-blue-200"

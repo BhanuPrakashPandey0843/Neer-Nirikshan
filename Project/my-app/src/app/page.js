@@ -6,8 +6,8 @@ import { motion, useAnimation } from 'framer-motion';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
-import AboutSection from '../../components/AboutSection/AboutSection';
-
+import About from '../../components/About/About';
+import Faq from '../../components/Faq/Faq';
 const Page = () => {
   const scrollContainer = useRef(null);
   const controls = useAnimation();
@@ -57,8 +57,8 @@ const Page = () => {
     >
       <Navbar />
       <Hero />
-      <AboutSection />
-      
+      <About />
+      <Faq />
      
 
       <Footer />
