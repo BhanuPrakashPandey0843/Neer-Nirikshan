@@ -6,30 +6,26 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How will I receive my project?",
+    question: "What kind of projects do you provide?",
     answer:
-      "We deliver all completed projects directly to your email for quick and secure access.",
+      "We deliver academic and professional projects in multiple domains like Web Development, Machine Learning, Data Science, and Civil/Mechanical Engineering with complete source code.",
   },
   {
-    question: "Do you provide documentation with the project?",
+    question: "Do I get documentation and reports with the project?",
     answer:
-      "Yes, every project comes with proper documentation to help you understand and present it easily.",
+      "Yes! Every project includes a detailed project report, proper documentation, and implementation guidelines for easy understanding and submission.",
   },
   {
-    question: "Will I get a presentation (PPT) along with the project?",
+    question: "Can you customize the project according to my requirements?",
     answer:
-      "Absolutely! We provide a ready-to-use PowerPoint presentation to make your submission seamless.",
+      "Yes, we offer full customization. You can share your specific requirements, and we’ll tailor the project to match your syllabus or personal goals.",
   },
   {
-    question: "Are your services affordable for students?",
+    question: "Are your services budget-friendly for students?",
     answer:
-      "Yes, we offer high-quality work at very reasonable and student-friendly prices.",
+      "Definitely! We maintain affordable pricing with student discounts, while ensuring top-notch quality in coding, documentation, and support.",
   },
-  {
-    question: "Can I get both project and resume help together?",
-    answer:
-      "Of course! We provide bundled services including projects, reports, resumes, and more at discounted rates.",
-  },
+ 
 ];
 
 const Faq = () => {
@@ -52,7 +48,7 @@ const Faq = () => {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold text-[#120B06] mb-4"
       >
-        Frequently Asked <span className="text-[#4BB04F]">Questions</span>
+        Frequently Asked <span className="text-[#558AFF]">Questions</span>
       </motion.h2>
 
       <motion.p
@@ -62,8 +58,8 @@ const Faq = () => {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="max-w-2xl mx-auto text-gray-600 mb-16 text-lg leading-relaxed"
       >
-        Find answers to common queries about our services, features, and how we
-        can help you make the most of your experience.
+        Find answers to the most common queries about our projects, services, and
+        support designed especially for students and professionals.
       </motion.p>
 
       {/* FAQ List */}

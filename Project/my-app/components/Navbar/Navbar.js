@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import logo from './Neer_Nirikshan_Logo.png';
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
+import logo from "./Neer_Nirikshan_Logo.png";
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/predictor', label: 'Predictor' },
-  { href: '/wqi', label: 'WQI Details' },
-  { href: '/contact', label: 'Contact' },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/predictor", label: "Predictor" },
+  { href: "/wqi", label: "WQI Details" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
       <motion.nav
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
       >
         {/* Logo + Brand */}
@@ -33,9 +33,9 @@ const Navbar = () => {
             alt="Neer Nirikshan Logo"
             width={45}
             height={45}
-            className="rounded-full"
+            className="rounded-full shadow-sm"
           />
-          <span className="text-2xl font-semibold tracking-wide text-[#333333]">
+          <span className="text-2xl font-extrabold tracking-wide text-[#333333] hover:text-[#558AFF] transition-colors duration-300">
             Neer Nirikshan
           </span>
         </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
           {navLinks.map((link, idx) => (
             <motion.li
               key={idx}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
               className="relative group cursor-pointer"
             >
@@ -56,7 +56,7 @@ const Navbar = () => {
                 {link.label}
               </Link>
               {/* Underline Animation */}
-              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#558AFF] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#558AFF] transition-all duration-300 group-hover:w-full rounded-full"></span>
             </motion.li>
           ))}
         </ul>
@@ -65,9 +65,10 @@ const Navbar = () => {
         <button
           className="md:hidden text-[#333333]"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
         >
           <i
-            className={`ri-${menuOpen ? 'close-line' : 'menu-line'} text-3xl`}
+            className={`ri-${menuOpen ? "close-line" : "menu-line"} text-3xl`}
           ></i>
         </button>
       </motion.nav>
@@ -80,13 +81,13 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-[#FBFCFF] shadow-lg border-t"
+            className="md:hidden bg-[#FBFCFF] shadow-xl border-t border-[#C9DAFF]/60 rounded-b-2xl"
           >
             <ul className="flex flex-col items-center gap-6 py-8 text-lg font-medium text-[#333333]">
               {navLinks.map((link, idx) => (
                 <motion.li
                   key={idx}
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="transition-colors hover:text-[#558AFF]"
                 >

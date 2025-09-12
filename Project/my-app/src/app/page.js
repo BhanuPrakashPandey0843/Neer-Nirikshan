@@ -8,6 +8,8 @@ import Navbar from '../../components/Navbar/Navbar';
 import Hero from '../../components/Hero/Hero';
 import About from '../../components/About/About';
 import Faq from '../../components/Faq/Faq';
+import Offer from '../../components/Offer/offer';
+import SubmitTool from '../../components/SubmitTool/SubmitTool';
 const Page = () => {
   const scrollContainer = useRef(null);
   const controls = useAnimation();
@@ -58,7 +60,10 @@ const Page = () => {
       <Navbar />
       <Hero />
       <About />
+        <Offer />
       <Faq />
+      <SubmitTool />
+    
      
 
       <Footer />
