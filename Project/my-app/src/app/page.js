@@ -1,85 +1,129 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef } from 'react';
-import Lenis from '@studio-freight/lenis';
-import { motion, useAnimation } from 'framer-motion';
-import Footer from '../../components/Footer/Footer';
-import Navbar from '../../components/Navbar/Navbar';
-import Hero from '../../components/Hero/Hero';
-import About from '../../components/About/About';
-import Faq from '../../components/Faq/Faq';
-import Offer from '../../components/Offer/offer';
-import SubmitTool from '../../components/SubmitTool/SubmitTool';
-const Page = () => {
-  const scrollContainer = useRef(null);
-  const controls = useAnimation();
+import { motion } from "framer-motion";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Pricing from "./components/Pricing.js";
+import Services from "./components/Services";
+import Testimonials from "./components/Testimonials"
+import Faq from "./components/Faq";
+import AppDownload from "./components/AppDownload";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-  useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.5,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-
-    // Example of triggering animations based on scroll
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      if (scrollY > 100) {
-        controls.start({ opacity: 1, y: 0 });
-      } else {
-        controls.start({ opacity: 0, y: 20 });
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      lenis.destroy();
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [controls]);
+export default function Home() {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
 
   return (
-    <div
-      ref={scrollContainer}
-      style={{
-        background: 'linear-gradient(135deg, #FBFCFF 0%, #C9DAFF 100%)',
-        color: '#333',
-        fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
-      }}
-    >
+    <div className="scroll-smooth">
+      {/* Navbar */}
       <Navbar />
-      <Hero />
-      <About />
-        <Offer />
-      <Faq />
-      <SubmitTool />
-    
-     
 
+      {/* Page Content */}
+      <main className="pt-16">
+        {/* Hero */}
+        <motion.section
+          id="hero"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Hero />
+        </motion.section>
+
+        {/* About */}
+        <motion.section
+          id="about"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <About />
+        </motion.section>
+
+        {/* Pricing */}
+        <motion.section
+          id="pricing"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Pricing />
+        </motion.section>
+
+        {/* Services */}
+        <motion.section
+          id="services"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Services />
+        </motion.section>
+
+
+<motion.section
+          id="
+      Testimonials"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          
+      <Testimonials />
+        </motion.section>
+
+      {/* Faq */}
+        <motion.section
+          id="app"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Faq />
+        </motion.section>
+
+
+
+
+
+
+
+        {/* App Download */}
+        <motion.section
+          id="app"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <AppDownload />
+        </motion.section>
+
+        {/* Contact */}
+        <motion.section
+          id="contact"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Contact />
+        </motion.section>
+      </main>
+
+      {/* Footer */}
       <Footer />
-      
-      {/* Inline Keyframes for ripple or other effects if needed */}
-      <style jsx>{`
-        body {
-          margin: 0;
-          padding: 0;
-          overflow-x: hidden;
-        }
-      `}</style>
     </div>
   );
-};
-
-export default Page;
-
-
+}

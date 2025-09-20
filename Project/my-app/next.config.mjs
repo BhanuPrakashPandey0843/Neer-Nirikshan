@@ -1,25 +1,9 @@
+// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "www.swfwmd.state.fl.us",
-      },
-      {
-        protocol: "https",
-        hostname: "shrimpcaresolutions.in",
-      },
-      {
-        protocol: "https",
-        hostname: "cdn3.vectorstock.com",
-      },
-      {
-        protocol: "https",
-        hostname: "thumbs.dreamstime.com",
-      },
-    ],
+    domains: ["www.wonderskool.com", "1.bp.blogspot.com"],
   },
 };
 
-export default nextConfig;
+export default nextConfig; // <-- ES module syntax
