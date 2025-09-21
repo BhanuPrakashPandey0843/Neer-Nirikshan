@@ -8,6 +8,7 @@ import Pricing from "./components/Pricing.js";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials"
 import Faq from "./components/Faq";
+import ProjectsShowcase from "./components/ProjectsShowcase";
 import AppDownload from "./components/AppDownload";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -35,6 +36,7 @@ export default function Home() {
         >
           <Hero />
         </motion.section>
+        
 
         {/* About */}
         <motion.section
@@ -45,6 +47,17 @@ export default function Home() {
           variants={fadeUp}
         >
           <About />
+        </motion.section>
+
+        {/* ProjectsShowcase  */}
+        <motion.section
+          id="about"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <ProjectsShowcase />
         </motion.section>
 
         {/* Pricing */}
