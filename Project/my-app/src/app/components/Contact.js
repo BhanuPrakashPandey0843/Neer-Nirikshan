@@ -19,26 +19,25 @@ const Contact = () => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <p className="text-sm text-[#4BB04F] font-medium">Contact us</p>
+          <p className="text-sm text-[#4BB04F] font-medium">Contact Us</p>
           <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
-            We value your input. <br />
-            <span className="text-[#4BB04F]">Share with us!</span>
+            Have questions or feedback? <br />
+            <span className="text-[#4BB04F]">Reach out to Neer Nirikshan!</span>
           </h2>
           <p className="text-gray-500 max-w-md text-sm leading-relaxed">
-            In our concise Frequently Asked Questions section, we’ve compiled
-            straightforward answers to address common queries about our
-            product/service.
+            We’re here to help you understand groundwater quality and water safety. 
+            Share your questions, feedback, or suggestions, and our team will get back to you promptly.
           </p>
 
           <div className="flex flex-col gap-6 mt-6">
             {/* Instagram */}
             <div className="flex items-center gap-3">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#F98531]/10 text-[#F98531] text-xl">
+              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-xl">
                 <RiInstagramLine />
               </span>
               <div>
                 <p className="font-medium">Instagram</p>
-                <p className="text-gray-600 text-sm">@ntcc_cse</p>
+                <p className="text-gray-600 text-sm">@neernirikshan</p>
               </div>
             </div>
 
@@ -49,7 +48,7 @@ const Contact = () => {
               </span>
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600 text-sm">helpersntcc@gmail.com</p>
+                <p className="text-gray-600 text-sm">contact@neernirikshan.com</p>
               </div>
             </div>
           </div>
@@ -64,7 +63,7 @@ const Contact = () => {
           className="bg-white shadow-md rounded-2xl p-8"
         >
           <h3 className="text-lg font-semibold mb-6 text-center text-gray-800">
-            We value your input
+            Send us your queries
           </h3>
 
           {state.succeeded ? (
@@ -124,17 +123,17 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Problem Statement */}
+              {/* Message / Query */}
               <textarea
-                name="problem_statement"
-                placeholder="Describe your problem statement..."
+                name="query"
+                placeholder="Describe your question or feedback..."
                 rows="3"
                 required
                 className="w-full p-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4BB04F]"
               ></textarea>
               <ValidationError
                 prefix="Message"
-                field="problem_statement"
+                field="query"
                 errors={state.errors}
               />
 

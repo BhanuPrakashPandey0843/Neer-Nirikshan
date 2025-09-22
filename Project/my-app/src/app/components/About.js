@@ -7,32 +7,32 @@ import {
   RiRocketLine,
   RiLightbulbFlashLine,
 } from "react-icons/ri";
-import phone from "./assets/about.png"; // replace with your image
+import phone from "./assets/about.png"; // replace with your dashboard image
 
 export default function About() {
   const featuresLeft = [
     {
       icon: <RiBook2Line size={30} className="text-[#4BB04F]" />,
-      title: "Academic Excellence",
-      desc: "Structured NTCC & final-year projects with plagiarism-free impactful reports.",
+      title: "Scientific Accuracy",
+      desc: "Reliable groundwater quality predictions using Machine Learning and traditional WQI calculations.",
     },
     {
       icon: <RiUserStarLine size={30} className="text-[#4BB04F]" />,
-      title: "Career Growth",
-      desc: "ATS-friendly resumes & tailored projects to boost your career profile.",
+      title: "User-Friendly Dashboard",
+      desc: "Intuitive, interactive visualizations and parameter-wise safety checks for quick insights.",
     },
   ];
 
   const featuresRight = [
     {
       icon: <RiRocketLine size={30} className="text-[#4BB04F]" />,
-      title: "Fast Delivery",
-      desc: "Never miss a deadline — we deliver quickly without losing quality.",
+      title: "Fast Analysis",
+      desc: "Instant results for uploaded water quality datasets without manual calculations.",
     },
     {
       icon: <RiLightbulbFlashLine size={30} className="text-[#4BB04F]" />,
-      title: "Innovation First",
-      desc: "Creative, modern solutions to help you stand out in academics & career.",
+      title: "Actionable Insights",
+      desc: "Identify contamination risks and trends to support decision-making for communities and policymakers.",
     },
   ];
 
@@ -58,7 +58,7 @@ export default function About() {
         transition={{ duration: 0.6 }}
         className="text-4xl md:text-5xl font-bold text-[#120B06] mb-6"
       >
-        Why Choose <span className="text-[#4BB04F]">Helpers</span>
+        Why Choose <span className="text-[#4BB04F]">Neer Nirikshan</span>
       </motion.h2>
 
       <motion.p
@@ -68,9 +68,8 @@ export default function About() {
         transition={{ delay: 0.3, duration: 0.7 }}
         className="max-w-2xl mx-auto text-gray-600 mb-16 text-lg leading-relaxed"
       >
-        We empower students and professionals with high-quality, affordable
-        solutions. From NTCC & final-year projects to ATS-friendly resumes, our
-        mission is simple: to help you succeed — professionally and reliably.
+        Neer Nirikshan empowers communities, researchers, and policymakers with accurate, real-time groundwater quality insights. 
+        Upload your water datasets and instantly view predictions, Water Quality Index calculations, and interactive visualizations — all in one platform.
       </motion.p>
 
       {/* Layout */}
@@ -104,7 +103,7 @@ export default function About() {
           ))}
         </div>
 
-        {/* Center Phone */}
+        {/* Center Dashboard Mockup */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -118,7 +117,7 @@ export default function About() {
             transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
             className="absolute w-64 h-64 bg-gradient-to-tr from-[#4BB04F] via-[#F98531] to-[#888EFF] blur-[80px] rounded-full -z-10"
           />
-          {/* Floating phone */}
+          {/* Floating dashboard image */}
           <motion.div
             animate={{ y: [0, -8, 0] }}
             transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
@@ -126,12 +125,10 @@ export default function About() {
           >
             <Image
               src={phone}
-              alt="App preview"
+              alt="Dashboard preview"
               className="max-w-[140px] md:max-w-[180px] lg:max-w-[250px] drop-shadow-xl"
             />
           </motion.div>
-          {/* Oval shadow */}
-          <div  />
         </motion.div>
 
         {/* Right Features */}
@@ -172,7 +169,7 @@ export default function About() {
             grid-template-columns: 1fr;
           }
           #about .grid > div:nth-child(2) {
-            order: -1; /* phone comes first */
+            order: -1; /* dashboard comes first */
             margin-bottom: 2rem;
           }
         }

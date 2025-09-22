@@ -15,8 +15,8 @@ const cards = [
   { src: "/assets/nine.png", text: "Field Test" },
   { src: "/assets/ten.png", text: "Lab Study" },
   { src: "/assets/eleven.png", text: "Inspection" },
-  { src: "/assets/twel.png", text: "Inspection" },
-  { src: "/assets/thrteen.png", text: "Inspection" },
+  { src: "/assets/twel.png", text: "Water Analysis" },
+  { src: "/assets/thrteen.png", text: "Quality Report" },
 ];
 
 // Scroll column with caption
@@ -62,7 +62,7 @@ const Hero = () => {
               transition={{ duration: 0.6 }}
               className="inline-block bg-gradient-to-r from-[#E9F8EC] to-[#DFFFE7] text-[#120B06] px-6 py-1.5 rounded-full text-sm font-medium mb-6 shadow-sm border border-green-100"
             >
-              Welcome to <span className="font-semibold text-[#2E9E46]">Helpers</span>
+              Welcome to <span className="font-semibold text-[#2E9E46]">Neer Nirikshan</span>
             </motion.div>
 
             <motion.h1
@@ -71,11 +71,11 @@ const Hero = () => {
               transition={{ duration: 0.7 }}
               className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#120B06] leading-tight mb-6"
             >
-              Complete Your <br />
+              Monitor & Predict <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#43B34F] to-[#2E9E46]">
-                Final Year Projects
+                Groundwater Quality
               </span>{" "}
-              Stress-Free
+              Efficiently
             </motion.h1>
 
             <motion.p
@@ -84,11 +84,9 @@ const Hero = () => {
               transition={{ delay: 0.2, duration: 0.7 }}
               className="text-lg text-gray-700 mb-10 max-w-xl leading-relaxed"
             >
-              At <span className="font-semibold text-[#2E9E46]">Helpers</span>, we provide{" "}
-              <span className="font-medium">NTCC final year projects</span> with{" "}
-              <span className="font-medium">clear reports, docs</span> and{" "}
-              <span className="font-medium">ATS-friendly resumes</span> — all at{" "}
-              <span className="font-semibold">student-friendly prices</span>.
+              Neer Nirikshan leverages <span className="font-semibold text-[#2E9E46]">Machine Learning</span> and WQI methods 
+              to provide <span className="font-medium">instant water quality analysis</span>, 
+              interactive visualizations, and actionable insights for <span className="font-medium">communities and researchers</span>.
             </motion.p>
 
             <motion.button

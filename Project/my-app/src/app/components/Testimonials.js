@@ -5,31 +5,31 @@ import { motion } from "framer-motion";
 
 const testimonials = [
   {
-    text: "Helpers made my NTCC project so easy! They provided a PPT, report, and proper guidance at a price I could actually afford. Truly a lifesaver in my final semester.",
-    name: "Akash Gupta",
-    role: "Amity Student",
-    img: "https://static.vecteezy.com/system/resources/previews/012/971/549/non_2x/unknown-person-with-paper-bag-on-hand-feel-confused-and-frustrated-man-or-woman-with-package-with-face-expression-feeling-doubts-illustration-free-vector.jpg",
+    text: "Neer Nirikshan helped me understand the water quality in my village. The WQI predictions and interactive maps made it easy to see which areas need attention.",
+    name: "Ravi Sharma",
+    role: "Environmental Researcher",
+    img: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     color: "#4BB04F",
   },
   {
-    text: "I was struggling with my research paper, but Helpers delivered a well-structured and plagiarism-free draft on time. Couldn’t believe the quality at this price!",
-    name: "Simran Kaur",
-    role: "Final Year Student",
-    img: "https://tse2.mm.bing.net/th/id/OIP.tXjqeJqt56RD_rcnh9rSFwHaH_?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3",
+    text: "Using the dashboard, we could quickly assess groundwater contamination risks across multiple locations. The AI predictions were surprisingly accurate.",
+    name: "Meena Kumari",
+    role: "NGO Water Analyst",
+    img: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     color: "#48407D",
   },
   {
-    text: "They helped me create a complete semester project with proper documentation and coding support. The team even cleared my doubts on WhatsApp. Highly recommend Helpers!",
-    name: "Rohit Singh",
-    role: "B.Tech Student",
-    img: "https://tse2.mm.bing.net/th/id/OIP.tXjqeJqt56RD_rcnh9rSFwHaH_?r=0&cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3",
+    text: "As an environmental engineer, I found the Neer Nirikshan platform invaluable for presenting WQI data to stakeholders. The visualizations and standards check feature saved a lot of time.",
+    name: "Ankit Verma",
+    role: "Environmental Engineer",
+    img: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     color: "#F98531",
   },
   {
-    text: "Thanks to Helpers, I got a full project ready for my BTI final year. They included PPT, code, and explanation notes which also helped me in my viva. Super student-friendly team!",
-    name: "Neha Verma",
-    role: "BTI Final Year Student",
-    img: "https://images.pexels.com/photos/5728888/pexels-photo-5728888.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    text: "The system’s combination of traditional WQI calculations and ML-based predictions gave me confidence in water quality assessments. Highly recommend for researchers and policymakers.",
+    name: "Priya Singh",
+    role: "Water Quality Specialist",
+    img: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
     color: "#FFB800",
   },
 ];
@@ -74,7 +74,7 @@ const Testimonials = () => {
         viewport={{ once: true }}
         className="text-4xl md:text-5xl font-bold text-center mb-6"
       >
-        What Our <span className="text-[#4BB04F]">Clients Say</span>
+        What Our <span className="text-[#4BB04F]">Users Say</span>
       </motion.h2>
 
       <motion.p
@@ -84,13 +84,12 @@ const Testimonials = () => {
         viewport={{ once: true }}
         className="max-w-2xl mx-auto text-center text-gray-600 mb-16 text-lg leading-relaxed"
       >
-        Real feedback from students and professionals who trusted us with their
-        projects, research papers, and presentations.
+        Real feedback from researchers, engineers, and water specialists who rely on Neer Nirikshan for groundwater quality monitoring and risk assessment.
       </motion.p>
 
       {/* Row 1 → left to right */}
       <motion.div
-        className="flex mb-10 group"   // 🔴 removed whitespace-nowrap
+        className="flex mb-10 group"
         animate={{ x: ["-100%", "0%"] }}
         transition={{
           repeat: Infinity,
@@ -105,7 +104,7 @@ const Testimonials = () => {
 
       {/* Row 2 → right to left */}
       <motion.div
-        className="flex group"   // 🔴 removed whitespace-nowrap
+        className="flex group"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
@@ -122,4 +121,3 @@ const Testimonials = () => {
 };
 
 export default Testimonials;
-

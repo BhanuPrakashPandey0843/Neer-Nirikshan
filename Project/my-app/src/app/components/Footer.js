@@ -6,14 +6,14 @@ import {
   RiLinkedinBoxLine,
   RiMailLine,
   RiGlobalLine,
-} from "react-icons/ri"; // Remix Icons
+} from "react-icons/ri"; 
 import Image from "next/image";
-import logo from "./assets/logo.png"; // Update path if needed
+import logo from "./assets/logo.png"; 
 
 export default function Footer() {
   return (
     <footer className="relative bg-[#120B06] text-white font-[Rubik] px-6 py-16">
-      {/* Gradient overlay for premium feel */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#120B06] via-[#1A120C] to-[#120B06] opacity-90 pointer-events-none"></div>
 
       <div className="relative max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-12 z-10">
@@ -32,23 +32,25 @@ export default function Footer() {
             </h2>
           </div>
           <p className="text-gray-300 leading-relaxed max-w-md">
-            Your trusted partner for final-year reports, academic projects, and
-            ATS-friendly resumes — making your academic and career journey
-            smooth, smart, and professional.
+            Neer Nirikshan is a cutting-edge groundwater quality prediction and visualization platform. 
+            It allows users to assess water safety, check parameter compliance with WHO/BIS standards, 
+            and compute Water Quality Index (WQI) with AI-powered insights for safer drinking water.
           </p>
 
           {/* Social Icons */}
           <div className="flex flex-wrap gap-4 mt-6">
             {[
-               { Icon: RiMailLine, link: "mailto:helpersntcc@gmail.com" },
-  { Icon: RiInstagramLine, link: "https://www.instagram.com/ntcc_cse/" },
-  { Icon: RiLinkedinBoxLine, link: "https://www.linkedin.com/in/helpers-763135381/" },
-  { Icon: RiGlobalLine, link: "https://helpers.com" },
+              { Icon: RiMailLine, link: "mailto:contact@neernirikshan.com" },
+              { Icon: RiInstagramLine, link: "https://www.instagram.com/neernirikshan/" },
+              { Icon: RiLinkedinBoxLine, link: "https://www.linkedin.com/company/neernirikshan/" },
+              { Icon: RiGlobalLine, link: "https://neernirikshan.com" },
             ].map(({ Icon, link }, i) => (
               <motion.a
                 key={i}
                 whileHover={{ scale: 1.15 }}
                 href={link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#4BB04F]/20 transition-colors duration-300 text-[#4BB04F] text-xl shadow-md"
               >
                 <Icon />
@@ -60,18 +62,17 @@ export default function Footer() {
         {/* Columns */}
         {[
           {
-            title: "Company",
-            links: ["About Us", "Our Services", "Contact"],
+            title: "Platform",
+            links: ["About Neer Nirikshan", "Features", "Contact Us"],
           },
           {
             title: "Services",
-            links: ["Final-Year Reports", "Academic Projects", "ATS-Friendly Resumes"],
+            links: ["WQI Prediction", "Standards Checker", "Data Visualization"],
           },
           {
             title: "Resources",
-            links: ["Blog", "Templates", "Guides"],
+            links: ["Documentation", "API Guide", "FAQs"],
           },
-          
         ].map((col, idx) => (
           <motion.div
             key={idx}
@@ -101,10 +102,10 @@ export default function Footer() {
       {/* Bottom Section */}
       <div className="relative border-t border-gray-700 mt-12 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400 z-10">
         <p className="text-center md:text-left hover:text-[#4BB04F] transition-colors">
-          User Terms & Conditions | Privacy Policy
+          Terms & Conditions | Privacy Policy
         </p>
         <p className="text-center md:text-right">
-          © {new Date().getFullYear()}  Helpers. All Rights Reserved.
+          © {new Date().getFullYear()} Neer Nirikshan. All Rights Reserved.
         </p>
       </div>
     </footer>

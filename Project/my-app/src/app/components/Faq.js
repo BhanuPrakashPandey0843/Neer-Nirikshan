@@ -6,29 +6,29 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    question: "How will I receive my project?",
+    question: "What is Neer Nirikshan?",
     answer:
-      "We deliver all completed projects directly to your email for quick and secure access.",
+      "Neer Nirikshan is an interactive platform that predicts and visualizes groundwater quality. It combines machine learning models, Water Quality Index (WQI) calculations, and standards checking to provide reliable insights.",
   },
   {
-    question: "Do you provide documentation with the project?",
+    question: "How does the WQI prediction work?",
     answer:
-      "Yes, every project comes with proper documentation to help you understand and present it easily.",
+      "Users input water parameters like pH, TDS, Nitrate, and Hardness. The system uses trained ML models to compute a Water Quality Index and categorize water quality as Excellent, Good, Poor, or Unsafe.",
   },
   {
-    question: "Will I get a presentation (PPT) along with the project?",
+    question: "Can I check if my water meets WHO/BIS standards?",
     answer:
-      "Absolutely! We provide a ready-to-use PowerPoint presentation to make your submission seamless.",
+      "Yes! Neer Nirikshan automatically compares your water parameters against WHO and BIS guidelines and highlights any deviations, giving instant health advisories.",
   },
   {
-    question: "Are your services affordable for students?",
+    question: "Do I need technical knowledge to use the platform?",
     answer:
-      "Yes, we offer high-quality work at very reasonable and student-friendly prices.",
+      "No technical expertise is required. The platform is designed to be user-friendly, allowing anyone to input water data and understand the results easily.",
   },
   {
-    question: "Can I get both project and resume help together?",
+    question: "Can I visualize trends and contamination risks over time?",
     answer:
-      "Of course! We provide bundled services including projects, reports, resumes, and more at discounted rates.",
+      "Absolutely! Neer Nirikshan provides interactive charts and maps so you can track groundwater quality trends and contamination risks effectively.",
   },
 ];
 
@@ -62,8 +62,7 @@ const Faq = () => {
         transition={{ delay: 0.2, duration: 0.6 }}
         className="max-w-2xl mx-auto text-gray-600 mb-16 text-lg leading-relaxed"
       >
-        Find answers to common queries about our services, features, and how we
-        can help you make the most of your experience.
+        Find answers to common queries about Neer Nirikshan, its features, and how it helps you monitor and predict groundwater quality efficiently.
       </motion.p>
 
       {/* FAQ List */}

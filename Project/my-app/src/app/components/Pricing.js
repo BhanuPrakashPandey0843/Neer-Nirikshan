@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import phoneMockup from "./assets/price.png";
+import phoneMockup from "./assets/price.png"; // Keep the same placeholder or update if needed
 
 const Pricing = () => {
   return (
@@ -21,7 +21,7 @@ const Pricing = () => {
         >
           <Image
             src={phoneMockup}
-            alt="NTCC Mobile App"
+            alt="Neer Nirikshan Dashboard"
             width={400}
             height={500}
             className="rounded-2xl shadow-xl"
@@ -36,52 +36,39 @@ const Pricing = () => {
           viewport={{ once: true }}
           className="space-y-6"
         >
-          <p className="text-sm text-[#4BB04F] font-medium">Our Prices</p>
+          <p className="text-sm text-[#4BB04F] font-medium">Our Platform</p>
           <h2 className="text-3xl md:text-4xl font-bold leading-snug text-gray-900">
-            Professional Project Assistance
+            Free & Open Access
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed max-w-md">
-            Affordable, student-friendly pricing with complete transparency. 
-            Pay only for what you need – from resumes to complete projects.
+            Neer Nirikshan provides free access to groundwater quality predictions, Water Quality Index (WQI) calculations, and interactive visualizations. All tools are designed to help communities, researchers, and policymakers monitor water safety effortlessly.
           </p>
 
-          {/* Features with Pricing */}
+          {/* Features */}
           <ul className="space-y-4">
-            <li className="flex items-start justify-between gap-3 border-b pb-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
-                <span className="text-gray-700 text-sm font-medium">
-                  Resume (ATS-Friendly)
-                </span>
-              </div>
-              <span className="text-[#120B06] font-semibold">₹99</span>
+            <li className="flex items-start gap-3">
+              <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
+              <span className="text-gray-700 text-sm font-medium">
+                Upload water data (CSV/Excel) for WQI predictions
+              </span>
             </li>
-            <li className="flex items-start justify-between gap-3 border-b pb-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
-                <span className="text-gray-700 text-sm font-medium">
-                  PowerPoint Presentation (PPT)
-                </span>
-              </div>
-              <span className="text-[#120B06] font-semibold">₹49</span>
+            <li className="flex items-start gap-3">
+              <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
+              <span className="text-gray-700 text-sm font-medium">
+                Compare ML-based predictions with traditional WQI calculations
+              </span>
             </li>
-            <li className="flex items-start justify-between gap-3 border-b pb-2">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
-                <span className="text-gray-700 text-sm font-medium">
-                  NTCC Thesis / Project Report
-                </span>
-              </div>
-              <span className="text-[#120B06] font-semibold">₹399</span>
+            <li className="flex items-start gap-3">
+              <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
+              <span className="text-gray-700 text-sm font-medium">
+                Interactive visualizations for contamination risks and trends
+              </span>
             </li>
-            <li className="flex items-start justify-between gap-3">
-              <div className="flex items-start gap-3">
-                <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
-                <span className="text-gray-700 text-sm font-medium">
-                  Complete Project (with Documentation)
-                </span>
-              </div>
-              <span className="text-[#120B06] font-semibold">₹599</span>
+            <li className="flex items-start gap-3">
+              <CheckCircle className="text-[#4BB04F] w-5 h-5 mt-1" />
+              <span className="text-gray-700 text-sm font-medium">
+                Parameter-wise standards check (WHO/BIS) for safety advisory
+              </span>
             </li>
           </ul>
 
@@ -92,7 +79,7 @@ const Pricing = () => {
               className="inline-block px-6 py-3 rounded-lg text-white font-medium shadow-md transition-all hover:shadow-lg"
               style={{ backgroundColor: "#4BB04F" }}
             >
-              Contact Us
+              Try It Now
             </a>
           </div>
         </motion.div>
