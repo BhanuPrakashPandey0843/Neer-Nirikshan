@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import phoneMockup from "./assets/phone.png";
+import phoneMockup from "./assets/banner.png";
 
 const AppDownload = () => {
   return (

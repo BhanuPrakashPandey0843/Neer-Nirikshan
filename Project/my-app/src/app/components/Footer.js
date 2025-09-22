@@ -28,7 +28,7 @@ export default function Footer() {
           <div className="flex items-center gap-3 mb-4">
             <Image src={logo} alt="Logo" width={45} height={45} />
             <h2 className="text-2xl font-bold text-[#4BB04F] tracking-wide">
-              Helpers
+              Neer Nirikshan
             </h2>
           </div>
           <p className="text-gray-300 leading-relaxed max-w-md">

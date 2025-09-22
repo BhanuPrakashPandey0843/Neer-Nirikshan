@@ -29,7 +29,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
             className="text-2xl font-bold text-[#4BB04F]"
           >
-            Helpers
+            Neer Nirikshan
           </motion.h1>
         </div>
 

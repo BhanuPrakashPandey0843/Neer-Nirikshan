@@ -1,6 +1,8 @@
+// Project/my-app/src/app/layout.js
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SmoothScroll from "./components/SmoothScroll"; // ✅ client component
+import SmoothScroll from "./components/SmoothScroll";
+import logo from "./components/assets/logo.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,26 +16,22 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-// ✅ Metadata (server-side only)
+// ✅ Next.js Metadata API (no manual <head> needed)
 export const metadata = {
-  title: "Helpers",
+  title: "Neer Nirikshan",
   description: "A modern Next.js application with custom fonts",
   icons: {
-    icon: "/logo.png",
+    icon: "/logo.png", // from public/
   },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/logo.png" type="image/png" />
-        <title>Helpers</title>
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-gray-900`}
       >
-        <SmoothScroll /> {/* ✅ runs Lenis on client */}
+        <SmoothScroll />
         {children}
       </body>
     </html>
