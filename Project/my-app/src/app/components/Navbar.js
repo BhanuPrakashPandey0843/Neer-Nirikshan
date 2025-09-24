@@ -9,13 +9,14 @@ import logo from "./assets/logo.png"; // ✅ Your logo
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Categories", href: "#categories" },
-    { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact" },
-  ];
+ const navLinks = [
+  { name: "Home", href: "/" },   
+  { name: "About", href: "/document" },  
+  { name: "Categories", href: "#categories" },
+  { name: "Services", href: "#services" },
+  { name: "Contact", href: "/contact" }, 
+];
+
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50 font-[Rubik]">

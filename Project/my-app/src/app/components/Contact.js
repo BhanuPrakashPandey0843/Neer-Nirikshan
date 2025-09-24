@@ -1,54 +1,78 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { RiMailLine, RiInstagramLine } from "react-icons/ri";
+import { RiMailLine, RiInstagramLine, RiPhoneLine, RiMapPinLine } from "react-icons/ri";
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 
 const Contact = () => {
-  const [state, handleSubmit] = useForm("xovnvbop"); // replace with your Formspree form ID
+  const [state, handleSubmit] = useForm("xovnvbop"); // replace with your Formspree ID
 
   return (
-    <section className="font-[Rubik] bg-[#F9FFF9] text-[#120B06] px-6 py-16 relative">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left Section */}
+    <section className="font-[Rubik] bg-[#F9FFF9] text-[#120B06] px-6 py-20 relative">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+        {/* Left Section - Info Cards */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="space-y-6"
+          className="space-y-8"
         >
-          <p className="text-sm text-[#4BB04F] font-medium">Contact Us</p>
-          <h2 className="text-2xl md:text-3xl font-semibold leading-snug">
+          <p className="text-sm text-[#4BB04F] font-medium uppercase tracking-wider">
+            Contact Us
+          </p>
+          <h2 className="text-3xl md:text-4xl font-bold leading-snug">
             Have questions or feedback? <br />
             <span className="text-[#4BB04F]">Reach out to Neer Nirikshan!</span>
           </h2>
-          <p className="text-gray-500 max-w-md text-sm leading-relaxed">
-            We’re here to help you understand groundwater quality and water safety. 
+          <p className="text-gray-600 text-sm leading-relaxed max-w-md">
+            We're here to help you understand groundwater quality and water safety.
             Share your questions, feedback, or suggestions, and our team will get back to you promptly.
           </p>
 
-          <div className="flex flex-col gap-6 mt-6">
-            {/* Instagram */}
-            <div className="flex items-center gap-3">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-xl">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {/* Instagram Card */}
+            <div className="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition">
+              <span className="w-12 h-12 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-2xl">
                 <RiInstagramLine />
               </span>
               <div>
                 <p className="font-medium">Instagram</p>
-                <p className="text-gray-600 text-sm">@neernirikshan</p>
+                <p className="text-gray-500 text-sm">@neernirikshan</p>
               </div>
             </div>
 
-            {/* Email */}
-            <div className="flex items-center gap-3">
-              <span className="w-10 h-10 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-xl">
+            {/* Email Card */}
+            <div className="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition">
+              <span className="w-12 h-12 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-2xl">
                 <RiMailLine />
               </span>
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-gray-600 text-sm">contact@neernirikshan.com</p>
+                <p className="text-gray-500 text-sm">contact@neernirikshan.com</p>
+              </div>
+            </div>
+
+            {/* Phone Card */}
+            <div className="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition">
+              <span className="w-12 h-12 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-2xl">
+                <RiPhoneLine />
+              </span>
+              <div>
+                <p className="font-medium">Phone</p>
+                <p className="text-gray-500 text-sm">+91 123 456 7890</p>
+              </div>
+            </div>
+
+            {/* Location Card */}
+            <div className="flex items-center gap-3 bg-white shadow-md rounded-xl p-4 hover:shadow-lg transition">
+              <span className="w-12 h-12 flex items-center justify-center rounded-full bg-[#4BB04F]/10 text-[#4BB04F] text-2xl">
+                <RiMapPinLine />
+              </span>
+              <div>
+                <p className="font-medium">Location</p>
+                <p className="text-gray-500 text-sm">123 Water St, Clean City, India</p>
               </div>
             </div>
           </div>
@@ -60,7 +84,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-white shadow-md rounded-2xl p-8"
+          className="bg-white shadow-lg rounded-3xl p-8 sm:p-10"
         >
           <h3 className="text-lg font-semibold mb-6 text-center text-gray-800">
             Send us your queries
@@ -72,8 +96,7 @@ const Contact = () => {
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Name fields */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   name="first_name"
@@ -90,7 +113,6 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Email */}
               <input
                 id="email"
                 type="email"
@@ -99,14 +121,9 @@ const Contact = () => {
                 required
                 className="w-full p-3 rounded-full border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4BB04F]"
               />
-              <ValidationError
-                prefix="Email"
-                field="email"
-                errors={state.errors}
-              />
+              <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-              {/* Location + Phone */}
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   name="location"
@@ -123,21 +140,15 @@ const Contact = () => {
                 />
               </div>
 
-              {/* Message / Query */}
               <textarea
                 name="query"
                 placeholder="Describe your question or feedback..."
-                rows="3"
+                rows="4"
                 required
                 className="w-full p-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#4BB04F]"
               ></textarea>
-              <ValidationError
-                prefix="Message"
-                field="query"
-                errors={state.errors}
-              />
+              <ValidationError prefix="Message" field="query" errors={state.errors} />
 
-              {/* Submit */}
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}

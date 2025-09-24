@@ -1,0 +1,119 @@
+Folder PATH listing
+Volume serial number is 8A4D-5FA0
+E:.
+�   .gitignore
+�   jsconfig.json
+�   logo with name.png
+�   logo.png
+�   next.config.mjs
+�   package-lock.json
+�   package.json
+�   postcss.config.mjs
+�   project_structure.txt
+�   README.md
+�   ui.txt
+�   
+����.next
+�   �   app-build-manifest.json
+�   �   build-manifest.json
+�   �   fallback-build-manifest.json
+�   �   package.json
+�   �   postcss.js
+�   �   postcss.js.map
+�   �   prerender-manifest.json
+�   �   routes-manifest.json
+�   �   trace
+�   �   
+�   �   ����app
+�   �   �   �   page.js
+�   �   �   �   page.js.map
+�   �   �   �   page_client-reference-manifest.js
+�   �   �   �   
+
+�           
+����components
+�   ����uilayouts
+�           globe.jsx
+�           
+����lib
+�       utils.js
+�       
+����public
+�   �   file.svg
+�   �   globe.svg
+�   �   logo.png
+�   �   next.svg
+�   �   vercel.svg
+�   �   window.svg
+�   �   
+�   ����assets
+�           about.png
+�           eighteen.png
+�           eleven.png
+�           five.png
+�           four.png
+�           logo.png
+�           nine.png
+�           one.png
+�           phone.png
+�           phoneone.png
+�           phonet.png
+�           phoneth.png
+�           price.png
+�           seven.png
+�           six.png
+�           ten.png
+�           three.png
+�           thrteen.png
+�           twel.png
+�           two.png
+�           
+����src
+    ����app
+        �   favicon.ico
+        �   globals.css
+        �   layout.js
+        �   page.js
+        �   
+        ����components
+            �   About.js
+            �   AppDownload.jsx
+            �   Contact.js
+            �   Faq.js
+            �   Footer.js
+            �   Hero.js
+            �   logo.png
+            �   Navbar.js
+            �   Pricing.js
+            �   ProjectsShowcase.js
+            �   Services.js
+            �   SmoothScroll.js
+            �   Testimonials.js
+            �   
+            ����assets
+                    about.png
+                    banner.png
+                    eighteen.png
+                    eleven.png
+                    five.png
+                    four.png
+                    logo.png
+                    nine.png
+                    one.png
+                    opoa.png
+                    opob.png
+                    opoc.png
+                    phone.png
+                    phoneone.png
+                    phonet.png
+                    phoneth.png
+                    price.png
+                    pricee.png
+                    seven.png
+                    six.png
+                    ten.png
+                    three.png
+                    thrteen.png
+                    twel.png
+                    two.png
+                    
