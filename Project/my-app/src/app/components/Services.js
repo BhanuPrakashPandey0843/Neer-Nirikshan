@@ -11,7 +11,7 @@ export default function Services() {
     {
       img: phone1,
       title: "Download the Comparative Study",
-      desc: "Get detailed analysis and reports on groundwater quality and water tests. Includes charts, WQI calculations, and insights.",
+      desc: "Get detailed analysis and reports on groundwater quality and water tests. Includes charts, WQI calculations.",
       layout: "text-top", // text above image
       href: "/comparative-study", // page link
     },
