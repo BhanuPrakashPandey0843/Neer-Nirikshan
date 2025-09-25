@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";  
 import DocumentHero from "../components/documenthero";
+import Paper from "../components/paper";
 import Footer from "../components/Footer";   
 
 export default function DocumentPage() {
@@ -25,6 +26,18 @@ export default function DocumentPage() {
           <DocumentHero/>
         </motion.div>
       </main>
+
+         <main>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+        >
+          <Paper/>
+        </motion.div>
+      </main>
+
 
       <Footer />
     </div>
