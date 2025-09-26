@@ -4,7 +4,8 @@ const nextConfig = {
     domains: [
       "www.wonderskool.com",
       "1.bp.blogspot.com",
-      "global-uploads.webflow.com", 
+      "global-uploads.webflow.com",
+      "cdn.dribbble.com",   
     ],
   },
 };
