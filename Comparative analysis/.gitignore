@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+.eggs/
+*.log
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Jupyter & IPython
+.ipynb_checkpoints
+*.ipynb_convert
+*.ipynb_checkpoints/
+
+# Distribution / Packaging
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+.manifest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Unit test / coverage reports
+.coverage*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+*.hypothesis/
+
+# PyCharm / VSCode / Editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Data & Models (customize based on project)
+*.csv
+*.tsv
+*.xlsx
+*.json
+*.pkl
+*.joblib
+*.h5
+*.db
+*.sqlite3
+models/
+artifacts/
+logs/
+checkpoints/
+
+# Environment / Config
+.env
+*.env
+.env.*
