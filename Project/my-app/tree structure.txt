@@ -1,0 +1,143 @@
+Folder PATH listing
+Volume serial number is 8A4D-5FA0
+E:.
+|   .gitignore
+|   jsconfig.json
+|   logo.png
+|   next.config.mjs
+|   package-lock.json
+|   package.json
+|   postcss.config.mjs
+|   project_structure.txt
+|   README.md
+|   tree structure.txt
+|   ui.txt
+|   
++---components
+|   \---uilayouts
+|           globe.jsx
+|           
++---lib
+|       utils.js
+|       
++---public
+|   |   file.svg
+|   |   globe.svg
+|   |   logo.png
+|   |   next.svg
+|   |   vercel.svg
+|   |   window.svg
+|   |   
+|   \---assets
+|           about.png
+|           eighteen.png
+|           eleven.png
+|           five.png
+|           four.png
+|           logo.png
+|           nine.png
+|           one.png
+|           phone.png
+|           phoneone.png
+|           phonet.png
+|           phoneth.png
+|           price.png
+|           seven.png
+|           six.png
+|           ten.png
+|           three.png
+|           thrteen.png
+|           twel.png
+|           two.png
+|           
+\---src
+    +---app
+    |   |   favicon.ico
+    |   |   globals.css
+    |   |   layout.js
+    |   |   page.js
+    |   |   
+    |   +---api
+    |   |   +---login
+    |   |   |       route.js
+    |   |   |       
+    |   |   +---payment
+    |   |   |       route.js
+    |   |   |       
+    |   |   \---signup
+    |   |           route.js
+    |   |           
+    |   +---calculator
+    |   |       page.js
+    |   |       
+    |   +---components
+    |   |   |   About.js
+    |   |   |   AppDownload.jsx
+    |   |   |   calhero.js
+    |   |   |   Contact.js
+    |   |   |   Contacthero.js
+    |   |   |   documenthero.js
+    |   |   |   Faq.js
+    |   |   |   Footer.js
+    |   |   |   Hero.js
+    |   |   |   loginhero.js
+    |   |   |   logo.png
+    |   |   |   Navbar.js
+    |   |   |   paper.js
+    |   |   |   Pricing.js
+    |   |   |   ProjectsShowcase.js
+    |   |   |   Services.js
+    |   |   |   serviceshero.js
+    |   |   |   signuphero.js
+    |   |   |   SmoothScroll.js
+    |   |   |   Testimonials.js
+    |   |   |   Wqicalculator.js
+    |   |   |   
+    |   |   \---assets
+    |   |           about.png
+    |   |           banner.png
+    |   |           eighteen.png
+    |   |           eleven.png
+    |   |           five.png
+    |   |           four.png
+    |   |           logo.png
+    |   |           nine.png
+    |   |           one.png
+    |   |           opoa.png
+    |   |           opob.png
+    |   |           opoc.png
+    |   |           phone.png
+    |   |           phoneone.png
+    |   |           phonet.png
+    |   |           phoneth.png
+    |   |           price.png
+    |   |           pricee.png
+    |   |           seven.png
+    |   |           six.png
+    |   |           ten.png
+    |   |           three.png
+    |   |           thrteen.png
+    |   |           twel.png
+    |   |           two.png
+    |   |           
+    |   +---contact
+    |   |       page.js
+    |   |       
+    |   +---dashboard
+    |   |       page.js
+    |   |       
+    |   +---document
+    |   |       page.js
+    |   |       
+    |   +---login
+    |   |       page.js
+    |   |       
+    |   +---services
+    |   |       page.js
+    |   |       
+    |   \---signup
+    |           page.js
+    |           
+    \---auth
+            users.json
+            

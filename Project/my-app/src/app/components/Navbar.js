@@ -4,19 +4,18 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-import logo from "./assets/logo.png"; // ✅ Your logo
+import logo from "./assets/logo.png"; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
- const navLinks = [
-  { name: "Home", href: "/" },   
-  { name: "About", href: "/document" },  
-  { name: "Calculator", href: "/calculator" }, 
-  { name: "Services", href: "#services" },
-  { name: "Contact", href: "/contact" }, 
-];
-
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/document" },
+    { name: "Calculator", href: "/calculator" },
+    { name: "Services", href: "/services" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow z-50 font-[Rubik]">
@@ -47,14 +46,18 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Auth Buttons */}
+        {/* Auth Buttons (Desktop) */}
         <div className="hidden md:flex space-x-4">
-          <button className="px-5 py-2 border border-[#4BB04F] text-[#4BB04F] rounded-full hover:bg-[#4BB04F] hover:text-white transition">
-            Log in
-          </button>
-          <button className="px-5 py-2 bg-[#4BB04F] text-white rounded-full hover:bg-[#388B3F] transition">
-            Sign up
-          </button>
+          <Link href="/login">
+            <button className="px-5 py-2 border border-[#4BB04F] text-[#4BB04F] rounded-full hover:bg-[#4BB04F] hover:text-white transition">
+              Log in
+            </button>
+          </Link>
+          <Link href="/signup">
+            <button className="px-5 py-2 bg-[#4BB04F] text-white rounded-full hover:bg-[#388B3F] transition">
+              Sign up
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -85,13 +88,18 @@ export default function Navbar() {
             </Link>
           ))}
 
+          {/* Auth Buttons (Mobile) */}
           <div className="flex flex-col space-y-3">
-            <button className="px-5 py-2 border border-[#4BB04F] text-[#4BB04F] rounded-full hover:bg-[#4BB04F] hover:text-white transition">
-              Log in
-            </button>
-            <button className="px-5 py-2 bg-[#4BB04F] text-white rounded-full hover:bg-[#388B3F] transition">
-              Sign up
-            </button>
+            <Link href="/login" onClick={() => setIsOpen(false)}>
+              <button className="w-full px-5 py-2 border border-[#4BB04F] text-[#4BB04F] rounded-full hover:bg-[#4BB04F] hover:text-white transition">
+                Log in
+              </button>
+            </Link>
+            <Link href="/signup" onClick={() => setIsOpen(false)}>
+              <button className="w-full px-5 py-2 bg-[#4BB04F] text-white rounded-full hover:bg-[#388B3F] transition">
+                Sign up
+              </button>
+            </Link>
           </div>
         </motion.div>
       )}
