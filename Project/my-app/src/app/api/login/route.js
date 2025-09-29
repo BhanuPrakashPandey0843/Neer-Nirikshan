@@ -1,12 +1,10 @@
+export const runtime = "nodejs"; 
 import { promises as fs } from "fs";
 import path from "path";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-// Path to your users file
 const usersFile = path.join(process.cwd(), "src/auth/users.json");
-
-// JWT secret
 const SECRET = process.env.JWT_SECRET || "supersecretkey";
 
 export async function POST(req) {
@@ -14,10 +12,9 @@ export async function POST(req) {
     const { email, password } = await req.json();
 
     if (!email || !password) {
-      return new Response(
-        JSON.stringify({ error: "Missing email or password" }),
-        { status: 400 }
-      );
+      return new Response(JSON.stringify({ error: "Missing email or password" }), {
+        status: 400,
+      });
     }
 
     // Load users
@@ -25,43 +22,37 @@ export async function POST(req) {
     try {
       const data = await fs.readFile(usersFile, "utf8");
       users = JSON.parse(data);
-    } catch (err) {
-      console.warn("No users file found or empty.");
+    } catch {
+      return new Response(JSON.stringify({ error: "No users found" }), {
+        status: 404,
+      });
     }
 
-    // Find user by email
+    // Find user
     const user = users.find((u) => u.email === email);
-    if (!user || !user.password) {
-      return new Response(JSON.stringify({ error: "Invalid credentials" }), {
-        status: 401,
-      });
+    if (!user) {
+      return new Response(JSON.stringify({ error: "Invalid credentials" }), { status: 401 });
     }
 
-    // Compare password with bcrypt
+    // Compare password
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log("Comparing:", password, "with hash:", user.password, "->", isMatch);
-
     if (!isMatch) {
-      return new Response(JSON.stringify({ error: "Invalid credentials" }), {
-        status: 401,
-      });
+      return new Response(JSON.stringify({ error: "Invalid credentials" }), { status: 401 });
     }
 
-    // Create JWT token
+    // Create JWT (use email instead of missing id)
     const token = jwt.sign(
-      { id: user.id, paid: user.paid },
+      { email: user.email, paid: user.paid },
       SECRET,
       { expiresIn: "1h" }
     );
 
-    // Respond with token and user info
     return new Response(
       JSON.stringify({
         token,
         user: {
-          id: user.id,
           email: user.email,
-          fullName: user.fullName || user.username,
+          fullName: user.fullName,
           paid: !!user.paid,
         },
       }),

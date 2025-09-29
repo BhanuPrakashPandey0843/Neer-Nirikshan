@@ -7,6 +7,7 @@ import Serviceshero from "../components/serviceshero";
 import Footer from "../components/Footer";   
 import Feature from "../components/Feature";
 import ProjectsShowcase from "../components/ProjectsShowcase"; 
+import Pricing from "../components/Pricing";
 
 export default function ServicesPage() {
   const [mode, setMode] = useState("farmer"); // default Farmer mode
@@ -68,7 +69,16 @@ export default function ServicesPage() {
       >
         <ProjectsShowcase />
       </motion.section>
-
+{/* Pricing */}
+      <motion.section
+        id="about"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeUp}
+      >
+        <Pricing />
+      </motion.section>
       {/* Footer */}
       <Footer />
     </div>
