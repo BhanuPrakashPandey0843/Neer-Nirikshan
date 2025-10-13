@@ -1,0 +1,157 @@
+(.venv) C:\Users\ABCD\Desktop\data\regression>python linear_regression_model.py
+
+--- DATA OVERVIEW ---
+   Temperature  Dissolved Oxygen    pH  ...  Total Coliform (MPN/ 100 mL)  Conductivity (mho/ Cm)        WQI
+0          7.5              9.95  7.85  ...                         180.0                   134.5  27.143963
+1         11.0              9.65  7.70  ...                         410.0                    77.0  15.780001
+2          7.5              9.90  7.65  ...                         200.0                   101.5  20.612438
+3          8.5              9.65  7.55  ...                         600.0                   148.0  29.820475
+4         10.0              9.55  7.80  ...                         380.0                   106.0  21.498569
+
+[5 rows x 10 columns]
+
+Shape of dataset: (295, 10)
+
+Missing values per column:
+ Temperature                          0
+Dissolved Oxygen                     0
+pH                                   0
+Bio-Chemical Oxygen Demand (mg/L)    0
+Faecal Streptococci (MPN/ 100 mL)    0
+Nitrate (mg/ L)                      0
+Faecal Coliform (MPN/ 100 mL)        0
+Total Coliform (MPN/ 100 mL)         0
+Conductivity (mho/ Cm)               0
+WQI                                  0
+dtype: int64
+
+--- Correlation with WQI ---
+WQI                                  1.000000
+Conductivity (mho/ Cm)               0.999743
+Bio-Chemical Oxygen Demand (mg/L)    0.261980
+Nitrate (mg/ L)                      0.165180
+pH                                   0.046825
+Faecal Streptococci (MPN/ 100 mL)    0.044002
+Total Coliform (MPN/ 100 mL)         0.044002
+Faecal Coliform (MPN/ 100 mL)        0.038203
+Temperature                          0.034991
+Dissolved Oxygen                    -0.195878
+Name: WQI, dtype: float64
+
+⚠️ Removing highly correlated features with WQI: ['Conductivity (mho/ Cm)']
+
+--- Variance Inflation Factor (VIF) ---
+                             Feature        VIF
+0                        Temperature  16.101156
+1                   Dissolved Oxygen  35.290491
+2                                 pH  70.222157
+3  Bio-Chemical Oxygen Demand (mg/L)   1.808027
+4  Faecal Streptococci (MPN/ 100 mL)        inf
+5                    Nitrate (mg/ L)   1.440147
+6      Faecal Coliform (MPN/ 100 mL)  10.461767
+7       Total Coliform (MPN/ 100 mL)        inf
+
+⚠️ Removing multicollinear features: ['Temperature', 'Dissolved Oxygen', 'pH', 'Faecal Streptococci (MPN/ 100 mL)', 'Faecal
+ Coliform (MPN/ 100 mL)', 'Total Coliform (MPN/ 100 mL)']
+
+Train set: (236, 2), Test set: (59, 2)
+
+===========================
+Linear Regression Performance
+===========================
+R² Score: -0.0452
+MAE: 75.8671
+RMSE: 150.3254
+
+Cross-Validation R² Scores: [-0.1025  0.0731  0.1079  0.092   0.0992  0.0798 -0.0509 -0.0195 -0.2074
+  0.0174]
+Mean CV R²: 0.0089
+
+--- Feature Coefficients ---
+                             Feature  Coefficient
+0  Bio-Chemical Oxygen Demand (mg/L)    61.730945
+1                    Nitrate (mg/ L)    16.773929
+
+✅ Research results saved to:
+   → research_results_linear_regression.csv
+   → feature_coefficients_linear_regression.csv
+
+(.venv) C:\Users\ABCD\Desktop\data\regression>python linear_regression_model.py
+
+--- DATA OVERVIEW ---
+   Temperature  Dissolved Oxygen    pH  ...  Total Coliform (MPN/ 100 mL)  Conductivity (mho/ Cm)        WQI
+0          7.5              9.95  7.85  ...                         180.0                   134.5  27.143963
+1         11.0              9.65  7.70  ...                         410.0                    77.0  15.780001
+2          7.5              9.90  7.65  ...                         200.0                   101.5  20.612438
+3          8.5              9.65  7.55  ...                         600.0                   148.0  29.820475
+4         10.0              9.55  7.80  ...                         380.0                   106.0  21.498569
+
+[5 rows x 10 columns]
+
+Shape of dataset: (295, 10)
+
+Missing values per column:
+ Temperature                          0
+Dissolved Oxygen                     0
+pH                                   0
+Bio-Chemical Oxygen Demand (mg/L)    0
+Faecal Streptococci (MPN/ 100 mL)    0
+Nitrate (mg/ L)                      0
+Faecal Coliform (MPN/ 100 mL)        0
+Total Coliform (MPN/ 100 mL)         0
+Conductivity (mho/ Cm)               0
+WQI                                  0
+dtype: int64
+
+--- Correlation with WQI ---
+WQI                                  1.000000
+Conductivity (mho/ Cm)               0.999743
+Bio-Chemical Oxygen Demand (mg/L)    0.261980
+Nitrate (mg/ L)                      0.165180
+pH                                   0.046825
+Faecal Streptococci (MPN/ 100 mL)    0.044002
+Total Coliform (MPN/ 100 mL)         0.044002
+Faecal Coliform (MPN/ 100 mL)        0.038203
+Temperature                          0.034991
+Dissolved Oxygen                    -0.195878
+Name: WQI, dtype: float64
+
+⚠️ Removing highly correlated features with WQI: ['Conductivity (mho/ Cm)']
+
+--- Variance Inflation Factor (VIF) ---
+                             Feature        VIF
+0                        Temperature  16.101156
+1                   Dissolved Oxygen  35.290491
+2                                 pH  70.222157
+3  Bio-Chemical Oxygen Demand (mg/L)   1.808027
+4  Faecal Streptococci (MPN/ 100 mL)        inf
+5                    Nitrate (mg/ L)   1.440147
+6      Faecal Coliform (MPN/ 100 mL)  10.461767
+7       Total Coliform (MPN/ 100 mL)        inf
+
+⚠️ Removing multicollinear features: ['Temperature', 'Dissolved Oxygen', 'pH', 'Faecal Streptococci (MPN/ 100 mL)', 'Faecal
+ Coliform (MPN/ 100 mL)', 'Total Coliform (MPN/ 100 mL)']
+
+Train set: (236, 2), Test set: (59, 2)
+
+===========================
+Linear Regression Performance
+===========================
+R² Score: -0.0452
+MAE: 75.8671
+RMSE: 150.3254
+
+Cross-Validation R² Scores: [-0.1025  0.0731  0.1079  0.092   0.0992  0.0798 -0.0509 -0.0195 -0.2074
+  0.0174]
+Mean CV R²: 0.0089
+
+--- Feature Coefficients ---
+                             Feature  Coefficient
+0  Bio-Chemical Oxygen Demand (mg/L)    61.730945
+1                    Nitrate (mg/ L)    16.773929
+
+✅ Research results saved to:
+   → research_results_linear_regression.csv
+   → feature_coefficients_linear_regression.csv
+
+(.venv) C:\Users\ABCD\Desktop\data\regression>

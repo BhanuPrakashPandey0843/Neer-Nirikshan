@@ -1,0 +1,54 @@
+(.venv) C:\Users\ABCD\Desktop\data\regression>python ran.py
+
+--- Dataset Info ---
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 295 entries, 0 to 294
+Data columns (total 10 columns):
+ #   Column               Non-Null Count  Dtype
+---  ------               --------------  -----
+ 0   Temperature          295 non-null    float64
+ 1   Dissolved_Oxygen     295 non-null    float64
+ 2   pH                   295 non-null    float64
+ 3   BOD                  295 non-null    float64
+ 4   Faecal_Streptococci  295 non-null    float64
+ 5   Nitrate              295 non-null    float64
+ 6   Faecal_Coliform      295 non-null    float64
+ 7   Total_Coliform       295 non-null    float64
+ 8   Conductivity         295 non-null    float64
+ 9   WQI                  295 non-null    float64
+dtypes: float64(10)
+memory usage: 23.2 KB
+None
+
+--- Missing Values ---
+Temperature            0
+Dissolved_Oxygen       0
+pH                     0
+BOD                    0
+Faecal_Streptococci    0
+Nitrate                0
+Faecal_Coliform        0
+Total_Coliform         0
+Conductivity           0
+WQI                    0
+dtype: int64
+
+Dataset shape after cleaning: (295, 10)
+Training shape: (236, 9), Testing shape: (59, 9)
+
+Training Random Forest model...
+Training complete!
+
+--- 10-Fold Cross-Validation ---
+CV Mean R²: 0.9511 ± 0.1239
+CV Mean MAE: 8.7089 ± 16.8835
+CV Mean RMSE: 31.7103 ± 70.1074
+
+===========================
+Random Forest Regression (Research-Optimized)
+===========================
+Test R² Score: 0.9885
+Test MAE: 5.5204
+Test RMSE: 15.7573
+
+Model results saved to 'results_random_forest_research.csv'

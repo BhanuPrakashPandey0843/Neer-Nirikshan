@@ -1,0 +1,62 @@
+(.venv) C:\Users\ABCD\Desktop\data\regression>python svr_model.py
+
+--- DATA OVERVIEW ---
+   Temperature  Dissolved Oxygen    pH  ...  Total Coliform (MPN/ 100 mL)  Conductivity (mho/ Cm)        WQI
+0          7.5              9.95  7.85  ...                         180.0                   134.5  27.143963
+1         11.0              9.65  7.70  ...                         410.0                    77.0  15.780001
+2          7.5              9.90  7.65  ...                         200.0                   101.5  20.612438
+3          8.5              9.65  7.55  ...                         600.0                   148.0  29.820475
+4         10.0              9.55  7.80  ...                         380.0                   106.0  21.498569
+
+[5 rows x 10 columns]
+
+Shape of dataset: (295, 10)
+
+Missing values per column:
+ Temperature                          0
+Dissolved Oxygen                     0
+pH                                   0
+Bio-Chemical Oxygen Demand (mg/L)    0
+Faecal Streptococci (MPN/ 100 mL)    0
+Nitrate (mg/ L)                      0
+Faecal Coliform (MPN/ 100 mL)        0
+Total Coliform (MPN/ 100 mL)         0
+Conductivity (mho/ Cm)               0
+WQI                                  0
+dtype: int64
+
+--- Variance Inflation Factor (VIF) ---
+               Feature          VIF
+0          Temperature    23.430075
+1     Dissolved_Oxygen    43.540140
+2                   pH   148.290240
+3                  BOD     8.835561
+4  Faecal_Streptococci  2959.115647
+5              Nitrate     1.578998
+6      Faecal_Coliform    62.648585
+7       Total_Coliform  2700.649779
+8         Conductivity    60.474979
+
+⚠️ Removing multicollinear features: ['Temperature', 'Dissolved_Oxygen', 'pH', 'Faecal_Streptococci', 'Faecal_Coliform', 'T
+otal_Coliform', 'Conductivity']
+
+Train set: (236, 2), Test set: (59, 2)
+
+Training SVR model...
+Training complete!
+
+--- 10-Fold Cross-Validation ---
+CV Mean R²: 0.0122 ± 0.1378
+CV Mean MAE: 53.4255 ± 27.4470
+CV Mean RMSE: 130.6976 ± 90.1442
+
+===========================
+Support Vector Regression (Research-Optimized)
+===========================
+Test R² Score: -0.0846
+Test MAE: 61.9205
+Test RMSE: 153.1343
+
+Model results saved to 'results_svr_research.csv'
+
+(.venv) C:\Users\ABCD\Desktop\data\regression>
