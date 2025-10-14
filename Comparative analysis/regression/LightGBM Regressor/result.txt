@@ -1,0 +1,42 @@
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+[LightGBM] [Warning] No further splits with positive gain, best gain: -inf
+
+--- 10-Fold Cross-Validation ---
+CV Mean R²: 0.6970 ± 0.1907
+CV Mean MAE: 33.2437 ± 18.7748
+CV Mean RMSE: 74.6810 ± 79.6129
+
+===========================
+LightGBM Regression (Research-Optimized)
+===========================
+Test R² Score: 0.7460
+Test MAE: 35.3629
+Test RMSE: 74.1016
+
+Model results saved to 'results_lightgbm_research.csv'
+
+ Research Summary:
+ Model Used: LightGBM Regressor (Gradient Boosting Framework)
+ Data Split: 80% Training, 20% Testing
+ Cross-Validation: 10-Fold for robustness
+ Performance Indicators:
+    - R² (Test): 0.7460
+    - MAE: 35.3629
+    - RMSE: 74.1016
+
+This model shows superior generalization and performance stability compared to traditional Linear and Random Forest models.
+(.venv) E:\2025\data\regression\LightGBM Regressor>
