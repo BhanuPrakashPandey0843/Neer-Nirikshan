@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
 const usersFile = path.join(process.cwd(), "src/auth/users.json");
-const SECRET = process.env.JWT_SECRET || "supersecretkey";
+const SECRET = process.env.JWT_SECRET;
 
 export async function POST(req) {
   try {
@@ -14,6 +14,12 @@ export async function POST(req) {
     if (!email || !password) {
       return new Response(JSON.stringify({ error: "Missing email or password" }), {
         status: 400,
+      });
+    }
+
+    if (!SECRET) {
+      return new Response(JSON.stringify({ error: "JWT secret not configured" }), {
+        status: 500,
       });
     }
 

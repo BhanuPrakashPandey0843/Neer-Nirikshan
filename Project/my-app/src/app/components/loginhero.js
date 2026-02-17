@@ -16,6 +16,24 @@ const Loginhero = () => {
     setError("");
     setLoading(true);
 
+    // ✅ Frontend-only Demo Login (Bypassing API for Vercel/Static deployment stability)
+    if (email === "jasikakumari17@gmail.com" && password === "Jasika00@") {
+      const demoUser = {
+        email: "jasikakumari17@gmail.com",
+        fullName: "Jasika Kumari",
+        paid: true,
+      };
+      
+      localStorage.setItem("user", JSON.stringify(demoUser));
+      document.cookie = "auth_token=demo-token; path=/; max-age=3600; secure; samesite=strict";
+      
+      // Artificial delay for better UX
+      setTimeout(() => {
+        router.push("/dashboard");
+      }, 500);
+      return;
+    }
+
     try {
       const res = await fetch("/api/login", {
         method: "POST",

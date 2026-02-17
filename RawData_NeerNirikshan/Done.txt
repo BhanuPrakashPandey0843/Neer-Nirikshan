@@ -1,0 +1,190 @@
+
+# 📘 Project Title (Working)
+
+**
+Performance Comparison of Machine Learning
+Approaches for Groundwater Quality Assessment
+**
+
+---
+
+# 📌 1. Objective of the Project
+
+The objecti00000000ve of this research is to perform a **
+Performance Comparison of Machine Learning
+Approaches for Groundwater Quality Assessment
+** using official monitoring data collected between 2019 and 2023.
+
+The study aims to:
+
+* Combine multi-year groundwater datasets
+* Create a structured master database
+* Prepare data for Water Quality Index (WQI), statistical, and machine learning analysis
+* Enable contamination trend analysis across states and districts
+
+---
+
+# 📌 2. Data Source
+
+All groundwater quality data has been collected from:
+
+Central Ground Water Board
+
+Specifically, the following annual datasets were downloaded:
+
+* Ground Water Quality Data – 2019
+* Ground Water Quality Data – 2020
+* Ground Water Quality Data – 2021
+* Ground Water Quality Data – 2022
+* Ground Water Quality Data – 2023
+
+These datasets contain:
+
+* Well ID
+* State
+* District
+* Block
+* Village
+* Latitude & Longitude
+* Physico-chemical parameters:
+
+  * pH
+  * EC (µS/cm)
+  * CO3
+  * HCO3
+  * Cl
+  * SO4
+  * NO3
+  * PO4
+  * Total Hardness (TH)
+  * Ca, Mg, Na, K
+  * Fluoride (F)
+  * TDS
+  * SiO2
+
+---
+
+# 📌 3. Folder Structure Created
+
+A structured project directory was created:
+
+```
+NeerNirikshan/
+│
+├── RawData/
+│   ├── final_nhs-wq_pre_2019_compressed.pdf
+│   ├── final_nhs-wq_pre_2020_compressed.pdf
+│   ├── final_nhs-wq_pre_2021_compressed.pdf
+│   ├── final_nhs-wq_pre_2022_compressed.pdf
+│   ├── final_nhs-wq_pre_2023_compressed.pdf
+│
+├── ProcessedData/
+│
+├── Scripts/
+│   └── extract_and_combine.py
+│
+└── venv/   (Python virtual environment)
+```
+
+This ensures:
+
+* Reproducibility
+* Clean workflow
+* Research-grade organization
+
+---
+
+# 📌 4. Python Environment Setup
+
+A dedicated Python virtual environment was created to ensure dependency isolation.
+
+Installed libraries:
+
+* pandas
+* numpy
+* tabula-py
+* jpype1
+* matplotlib
+* seaborn
+* openpyxl
+
+Java was verified to support PDF table extraction using Tabula.
+
+---
+
+# 📌 5. Data Extraction Process
+
+A Python script (`extract_and_combine.py`) was developed to:
+
+1. Read all PDF files using `tabula`
+2. Extract all tables from each PDF
+3. Remove repeated header rows
+4. Add a Year column (extracted from filename)
+5. Concatenate all years into one dataset
+6. Export the combined dataset as:
+
+```
+CGWB_2019_2023_RAW_COMBINED.csv
+```
+
+This creates a unified multi-year groundwater quality dataset.
+
+---
+
+# 📌 6. Current Status
+
+✔ All PDFs downloaded
+✔ Folder structure created
+✔ Virtual environment configured
+✔ Extraction script written
+✔ JPype dependency issue identified and resolved
+✔ Ready to generate combined raw dataset
+
+---
+
+# 📌 7. Next Steps
+
+The upcoming phases include:
+
+### Phase 1 – Data Cleaning
+
+* Remove malformed rows
+* Standardize column names
+* Convert numeric columns
+* Handle missing values
+* Remove repeated header artifacts
+
+### Phase 2 – Data Validation
+
+* Check column consistency across years
+* Verify units
+* Remove duplicate entries
+
+### Phase 3 – Analytical Preparation
+
+* Compute Water Quality Index (WQI)
+* Perform trend analysis (2019–2023)
+* Conduct state-wise contamination comparison
+* Prepare dataset for ML models
+
+---
+
+# 📌 8. Research Direction
+
+The dataset will support:
+
+* Spatio-temporal groundwater assessment
+* Contamination exceedance analysis
+* Machine learning-based classification
+* Risk zoning and mapping
+
+---
+
+# 🎯 Summary Statement
+
+At this stage, the project has successfully completed:
+
+> Data acquisition, environment setup, and automated extraction pipeline development.
+
+The project is now entering the **data cleaning and preprocessing phase**, which is critical before performing statistical and machine learning analysis.
+

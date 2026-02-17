@@ -1,0 +1,49 @@
+# Node
+node_modules/
+.pnp/
+.pnp.*
+*.log
+.next/
+out/
+build/
+.vercel/
+.env*
+*.tsbuildinfo
+
+# Package managers
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.env/
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+
+# OS/IDE
+.DS_Store
+Thumbs.db
+
+# Expo/Next
+**/.expo/
+
+# Project-specific
+RawData_NeerNirikshan/venv/
+RawData_NeerNirikshan/ProcessedData/

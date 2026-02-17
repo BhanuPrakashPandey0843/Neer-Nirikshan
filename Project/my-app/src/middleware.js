@@ -2,12 +2,16 @@
 import { NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
-const SECRET = new TextEncoder().encode(process.env.JWT_SECRET || "supersecretkey");
+const rawSecret = process.env.JWT_SECRET;
+const SECRET = rawSecret ? new TextEncoder().encode(rawSecret) : null;
 
 export async function middleware(req) {
   const { pathname } = req.nextUrl;
 
   if (pathname.startsWith("/dashboard") || pathname.startsWith("/payment")) {
+    if (!SECRET) {
+      return NextResponse.redirect(new URL("/login", req.url));
+    }
     const token = req.cookies.get("auth_token")?.value;
 
     if (!token) {

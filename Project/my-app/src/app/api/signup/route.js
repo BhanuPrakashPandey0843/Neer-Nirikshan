@@ -4,7 +4,7 @@ import path from "path";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 
-const SECRET = "supersecretkey"; // move to env in production
+const SECRET = process.env.JWT_SECRET;
 
 export async function POST(req) {
   try {
@@ -39,6 +39,13 @@ export async function POST(req) {
 
     users.push(newUser);
     fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
+
+    if (!SECRET) {
+      return new Response(
+        JSON.stringify({ success: false, message: "JWT secret not configured" }),
+        { status: 500, headers: { "Content-Type": "application/json" } }
+      );
+    }
 
     // Generate token
     const token = jwt.sign(
