@@ -19,7 +19,11 @@
     "jspdf": "^3.0.3",
     "jspdf-autotable": "^5.0.2",
     "lucide-react": "^0.542.0",
+<<<<<<< HEAD
     "next": "16.1.6",
+=======
+    "next": "15.5.9",
+>>>>>>> def15edf9a70cb3232949ac7b28bd1aa76c184b0
     "razorpay": "^2.9.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
