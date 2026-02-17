@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: [
-      "www.wonderskool.com",
-      "1.bp.blogspot.com",
-      "global-uploads.webflow.com",
-      "cdn.dribbble.com",   
+    remotePatterns: [
+      { protocol: "https", hostname: "www.wonderskool.com" },
+      { protocol: "https", hostname: "1.bp.blogspot.com" },
+      { protocol: "https", hostname: "global-uploads.webflow.com" },
+      { protocol: "https", hostname: "cdn.dribbble.com" }
     ],
   },
 };
